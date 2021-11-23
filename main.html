@@ -5,18 +5,14 @@
     <p class="wiki-toc-section-1 wiki-toc-section">3. <a href="#toc-3">AutoFE – Automated Feature Engineering </a></p>
     <p class="wiki-toc-section-1 wiki-toc-section">4. <a href="#toc-4">HPO – Hyperparameter Optimization </a></p>
     <p class="wiki-toc-section-1 wiki-toc-section">5. <a href="#toc-5">NAS – Neural Architecture Search </a></p>
-    <p class="wiki-toc-section-1 wiki-toc-section">6. <a href="#toc-6">Ventajas e inconvenientes frente a enfoques
-            tradicionales </a></p>
+    <p class="wiki-toc-section-1 wiki-toc-section">6. <a href="#toc-6">Ventajas e inconvenientes frente a enfoques tradicionales </a></p>
     <p class="wiki-toc-section-1 wiki-toc-section">7. <a href="#toc-7">Áreas de aplicación en IA </a></p>
     <p class="wiki-toc-section-2 wiki-toc-section">7.1. <a href="#toc-8">Visión</a></p>
     <p class="wiki-toc-section-2 wiki-toc-section">7.2. <a href="#toc-9">Traducción</a></p>
     <p class="wiki-toc-section-2 wiki-toc-section">7.3. <a href="#toc-10">Procesado de Lenguaje Natural</a></p>
-    <p class="wiki-toc-section-1 wiki-toc-section">8. <a href="#toc-11">Casos específicos de uso </a>
-    </p>
-    <p class="wiki-toc-section-2 wiki-toc-section">8.1. <a href="#toc-12">Identificación de perros callejeros
-            (Visión)</a></p>
-    <p class="wiki-toc-section-2 wiki-toc-section">8.2. <a href="#toc-13">Previsión de quiebras financieras
-            (Predicción)</a></p>
+    <p class="wiki-toc-section-1 wiki-toc-section">8. <a href="#toc-11">Casos específicos de uso </a></p>
+    <p class="wiki-toc-section-2 wiki-toc-section">8.1. <a href="#toc-12">Identificación de perros callejeros (Visión) </a></p>
+    <p class="wiki-toc-section-2 wiki-toc-section">8.2. <a href="#toc-13">Previsión de quiebras financieras (Predicción) </a></p>
     <p class="wiki-toc-section-1 wiki-toc-section">9. <a href="#toc-14">Futuras aplicaciones </a></p>
     <p class="wiki-toc-section-1 wiki-toc-section">10. <a href="#toc-15">Conclusiones </a></p>
     <p class="wiki-toc-section-1 wiki-toc-section">11. <a href="#toc-16">Bibliografía </a></p>
@@ -26,13 +22,21 @@
 </div>
 <h1 style="text-align:center;font-family:'Linux Libertine', Georgia, Times, serif;font-size:1.8em;"><a href="#toc-1"></a>AutoML</h1>
 <h2 style="border-bottom:1px solid #a2a9b1;margin-top:1em;font-size:1.5em;font-family:'Linux Libertine', Georgia, Times, serif;"><a></a>Introducción</h2>
-<p style="font-family:sans-serif;line-height:1.6;">En este proyecto se explicará en qué consiste la técnica de AutoML, que permite en la actualidad hacer mucho más accesible a todos el Machine Learning y su gran potencia para la resolución de problemas y automatización de tareas.</p>
-<p style="font-family:sans-serif;line-height:1.6;">Además de explicar en qué consiste, se verán los diferentes procesos que lo componen. No obstante se explorarán los principales tipos de problemas a los que se aplica, que son la Ingeniería Automática de Características, la Optimización de hiperparámetros
-    y la Búsqueda de Arquitectura Neuronales.</p>
-<p style="font-family:sans-serif;line-height:1.6;">Una vez tengamos claro cómo funciona y de que es capaz, veremos su potencia en una serie de casos de estudio en los que se han empleado estas técnicas para diferentes tipos de problemas y en los que ha resultado realmente útil.</p>
+<p style="font-family:sans-serif;line-height:1.6;">En este proyecto se explicará en qué consiste la técnica de AutoML, que permite en la actualidad hacer mucho más accesible a todos el Machine Learning (Aprendizaje Automático) y su gran potencia para la resolución de problemas y automatización de tareas. Alejaremos esa visión oscura de que estas técnicas solo están al alcance de las grandes compañías con los mejores expertos del mercado.</p>
+<p style="font-family:sans-serif;line-height:1.6;">Además de explicar en qué consiste, se verán los diferentes procesos que lo componen. No obstante se explorarán los principales tipos de problemas a los que se aplica, que son la Ingeniería Automática de Características (Automated Feature Engineering), la Optimización de hiperparámetros (Hyperparameter Optimization) y la Búsqueda de Arquitectura Neuronales (Neural Architecture Search).</p>
+<p style="font-family:sans-serif;line-height:1.6;">Una vez tengamos claro cómo funciona y de que es capaz, se pasará a hacer una reflexión sobre que nos puede ofrecer el AutoML con respecto al Machine Learning tradicional, realizando un balance de ventaja e inconvenientes de este.</p>
+<p style="font-family:sans-serif;line-height:1.6;">Seguidamente, se explorarán las principales áreas de la inteligencia artificial en las que más destaca, en las que se contará que tiene que aportar.</p>
+<p style="font-family:sans-serif;line-height:1.6;">Esto servirá como premisa antes de pasar a contemplar su potencia en una serie de casos de estudio en los que se han empleado estas técnicas para diferentes tipos de problemas y en los que ha resultado realmente útil.</p>
 <p style="font-family:sans-serif;line-height:1.6;">También se estudiarán cuáles son las posibles ampliaciones que se podrán hacer en un futuro a esta técnica, para cubrir problemas más complejos o en situaciones en las que todavía no se emplean técnicas de inteligencia artificial.</p>
+<p style="font-family:sans-serif;line-height:1.6;">En última instancia, completaremos este proyecto exponiendo cuáles han sido nuestras impresiones e ideas finales, reflexionando sobre las aplicaciones en diversos campos de las técnicas asociadas a AutoML.</p>
 <h2 style="border-bottom:1px solid #a2a9b1;margin-top:1em;font-size:1.5em;font-family:'Linux Libertine', Georgia, Times, serif;"><a></a>¿Qué es el AutoML?</h2>
 <p style="font-family:sans-serif;line-height:1.6;"><br /></p>
+<p style="font-family:sans-serif;line-height:1.6;"><br /></p>
+<p style="font-family:sans-serif;line-height:1.6;"><br /></p>
+<p style="font-family:sans-serif;line-height:1.6;"><br /></p>
+<p style="font-family:sans-serif;line-height:1.6;"><br /></p>
+<p style="font-family:sans-serif;line-height:1.6;"><br /></p>
+<p style="font-family:sans-serif;line-height:1.6;"><img src="https://ars.els-cdn.com/content/image/1-s2.0-S0950705120307516-gr1.jpg" alt="1-s2.0-S0950705120307516-gr1.jpg"></p>
 <h2 style="border-bottom:1px solid #a2a9b1;margin-top:1em;font-size:1.5em;font-family:'Linux Libertine', Georgia, Times, serif;"><a></a>AutoFE – Automated Feature Engineering</h2>
 <p style="font-family:sans-serif;line-height:1.6;"><br /></p>
 <h2 style="border-bottom:1px solid #a2a9b1;margin-top:1em;font-size:1.5em;font-family:'Linux Libertine', Georgia, Times, serif;"><a></a>HPO – Hyperparameter Optimization</h2>
