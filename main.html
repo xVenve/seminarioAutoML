@@ -35,6 +35,10 @@
     <p class="wiki-toc-section-2 wiki-toc-section">7.5. <a href="#blockchain">Blockchain</a></p>
     <p class="wiki-toc-section-1 wiki-toc-section">8. <a href="#casosDeUso">Casos específicos de uso </a></p>
     <p class="wiki-toc-section-2 wiki-toc-section">8.1. <a href="#caso1">Identificación de perros callejeros </a></p>
+    <p class="wiki-toc-section-3 wiki-toc-section">8.1.1 <a href="#introduccionDelCaso">Introducción del caso </a></p>
+    <p class="wiki-toc-section-3 wiki-toc-section">8.1.2 <a href="#metodologia">Metodología </a></p>
+    <p class="wiki-toc-section-3 wiki-toc-section">8.1.3 <a href="#resultados">Resultados </a></p>
+    <p class="wiki-toc-section-3 wiki-toc-section">8.1.4 <a href="#Conclusiones">Conclusiones </a></p>
     <p class="wiki-toc-section-2 wiki-toc-section">8.2. <a href="#caso2">Predicción de accidentes de tráfico </a></p>
     <p class="wiki-toc-section-1 wiki-toc-section">9. <a href="#futurasAplicaciones">Futuras aplicaciones </a></p>
     <p class="wiki-toc-section-1 wiki-toc-section">10. <a href="#conclusiones">Conclusiones </a></p>
@@ -190,7 +194,7 @@
 
 <h3 style="font-weight:bold; font-size:16.8px; font-family:sans-serif;" id="estrategiaDeEvaluacion">Estrategia de evaluación</h3>
 <h4 style="font-weight:bold; font-size:14px; font-family:sans-serif;" id="entrenamientoCero">Entrenamiento desde cero</h4>
-<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Como en los algoritmos de búsqueda existe una manera sencilla de afrontar el problema de la evaluación, esto es el entrenamiento completo hasta que el modelo converja de cada una de las arquitecturas que se prueba. Sin embargo, además de ineficiente ––ya que por ejemplo en el enfoque de proceso progresivo de las decisiones los modelos muy sencillos iniciales y los más complejos conllevan el mismo nivel de evaluación––, este enfoque también es pobre, estadísticamente hablando, ya que se genera un único punto de evaluación. Lo más conveniente, como ya se hace en la validación cruzada, sería obtener distintas mediciones para distintos conjuntos de datos que permitan obtener una medición de rendimiento más fiable. Este enfoque fue utilizado por Zoph &amp; Le <a href="#ref:ProgressiveNeural">[17]</a>.</p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Como en los algoritmos de búsqueda existe una manera sencilla de afrontar el problema de la evaluación, esto es el entrenamiento completo hasta que el modelo converja de cada una de las arquitecturas que se prueba. Sin embargo, además de ineficiente —ya que por ejemplo en el enfoque de proceso progresivo de las decisiones los modelos muy sencillos iniciales y los más complejos conllevan el mismo nivel de evaluación—, este enfoque también es pobre, estadísticamente hablando, ya que se genera un único punto de evaluación. Lo más conveniente, como ya se hace en la validación cruzada, sería obtener distintas mediciones para distintos conjuntos de datos que permitan obtener una medición de rendimiento más fiable. Este enfoque fue utilizado por Zoph &amp; Le <a href="#ref:ProgressiveNeural">[17]</a>.</p>
 
 <h4 style="font-weight:bold; font-size:14px; font-family:sans-serif;" id="proxyTask">Proxy task performance</h4>
 <p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Esta estrategia parte de la suposición de que los resultados que un modelo obtenga en problemas similares, pero más simples, del problema original se verán trasladados a este último. Puede, por tanto, intentar hacer evaluaciones con imágenes de menor resolución, menos ejemplos, menos ciclos, etc.</p>
@@ -236,7 +240,186 @@
 
 <h2 style="border-bottom:1px solid #a2a9b1; margin-top:1em; font-size:21px; font-family:'Linux Libertine', Georgia, Times, serif;" id="casosDeUso">Casos específicos de uso</h2>
 <h3 style="font-weight:bold; font-size:16.8px; font-family:sans-serif;" id="caso1">Identificación de perros callejeros</h3>
-<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;"><br/></p>
+
+<h4 style="font-weight:bold; font-size:14px; font-family:sans-serif;" id="introduccionDelCaso">Introducción del caso</h4>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">La población de canes callejeros aumenta cada año. El objetivo de la presente investigación es hacer uso del reconocimiento de imágenes aplicando AutoML para optimizar la identificación de canes callejeros que se encuentran en estado de pérdida.</p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">El vínculo humano-perro tiene varias teorías en lo que se refiere a su origen, siendo la más representativa cuando los humanos eran cazadores-recolectores, debido a la facilidad con la que los perros podían alimentarse, participando en actividades junto con los humanos, como la caza y el transporte. Lo que lleva a que el vínculo sea parte de la historia de ambas especies.</p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Los perros que se separaron de los humanos para continuar viviendo solos, fueron llamados perros callejeros. Por instinto, estos perros pueden sobrevivir sin el vínculo humano, pero sin algún tipo de educación o crianza que les permita tener una buena salud, puede ser perjudicial para los humanos, estos son una de las principales causas de salud pública.</p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Las investigaciones muestran que la cantidad de perros callejeros está aumentando en diferentes lugares. Según el informe de 2016 de la Fundación Affinity, estimó que aproximadamente 138 mil animales, entre perros y gatos, fueron recogidos en las calles de España. El 15 % fueron abandonados por camadas innecesarias, el 13 % por problemas de conducta, 8 % por pérdida de interés y 12 % por factores económicos. Por otro lado, según un informe de la fundación Ecuador Animal Protection, solo en Quito había 600000 mascotas, de las cuales el 20 % estaban abandonadas, otro 20 % eran propiedad y el 60 % restante vivía en la calle.</p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Se propone una aplicación que permita poner en contacto a personas voluntarias con los dueños de los perros perdidos y que así estos puedan encontrar a su mascota.</p>
+
+<h4 style="font-weight:bold; font-size:14px; font-family:sans-serif;" id="metodologia">Metodología</h4>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Los autores del estudio dividieron el trabajo de experimentación en cuatro fases:</p>
+
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;"><strong>Fase 1: Preguntas</strong></p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">En primer lugar, los autores se intentaron responder a estas preguntas:</p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">RQ1: ¿Es posible crear una aplicación móvil para identificar y reportar perros callejeros de forma eficiente aplicando reconocimiento de imágenes?</p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">RQ2: ¿Es posible que una aplicación móvil con reconocimiento de imágenes para identificar perros callejeros sea más accesible?</p>
+
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;"><strong>Fase 2: Proposición de un modelo capaz de identificar la raza del perro basándose en una imagen. Se sigue el ciclo típico para cualquier modelo de machine learning.</strong></p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">1: Generación de un dataset con fotos de perros para la fase de entrenamiento:</p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Para ello se obtuvieron imágenes de dos conjuntos de datos de Kaggle. Se dispuso de un total de 1600 imágenes. De todas estas se hizo una revisión y se eliminaron las que no eran válidas para este modelo. Faltaban imágenes de ciertas razas, por lo que se complementó lo anterior con una búsqueda en Google imágenes de las razas faltantes. Después de todas las búsquedas y agregación de los distintos datos, se obtuvo un conjunto final de mil imágenes dividido en diez grupos, en el que cada uno contiene las imágenes de una raza (Dóberman, Beagle, Toy terrier, Siberian husky, Cardigan, Shih Tzu, Redbone, Gordon setter and Pembroke).</p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">2: Entrenar el modelo:</p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Para esta fase se utilizó Google Cloud AutoML vision, un software de Google que usa tecnología de Búsqueda de la arquitectura de la red (NAS) y de transferencia del conocimiento (transfer learning). Democratiza el entrenamiento y uso de modelos de machine learning y logra la optimización y automatización del mismo, a diferencia de las arquitecturas manuales, que requieren mayor conocimiento.</p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">El tipo de modelo utilizado fue edge, que permite después ser exportado para utilizarse en una app móvil, se eligió la optimización vest compensation. Se utilizaron cuatro nodos por hora para el entrenamiento y tres para la predicción.</p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">3: Exportarlo para poder ser usado en una aplicación.</p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Al término de la fase anterior se obtuvo un fichero tflite con el modelo y diferentes metadatos asociados necesarios para la implementación del mismo en la aplicación.</p>
+
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;"><strong>Fase 3: Desarrollo de la aplicación que implementa el modelo.</strong></p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Al no ser esta una asignatura de ingeniería del software, se dará alguna pincelada sobre este apartado. Si el lector lo desea podrá profundizar más sobre este aspecto en el paper referenciado.</p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Esta app tiene dos funcionalidades o módulos claramente diferenciados, módulo de identificación y módulo de pérdida. Será implementada en Android, estará escrita en java. El flujo de uso será como sigue:</p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Se envía la foto más actual del perro perdido, a través de la aplicación móvil del dueño del perro, en el momento en que se registra la pérdida, luego, el modelo etiqueta la foto. Cuando un perro se pierde, se convierte en uno de los muchos perros callejeros que existen, por lo tanto, si una persona lo encuentra, solo tiene que enviar una foto del perro callejero a través de su aplicación móvil, esta foto se enviará al modelo de reconocimiento. que lo clasificará con una etiqueta. Una vez hecho esto, la base de datos realizará una búsqueda en tiempo real, hará coincidir la etiqueta con respecto a las etiquetas de los perros perdidos, para finalmente mostrar todos los perros que encuentre.</p>
+
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;"><strong>Fase 4: Validación de la solución. Se hace una búsqueda primero en portales habituales y después con esta aplicación.</strong></p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Se proponen dos escenarios de evaluación diferentes. Primero utilizando las webs conocidas para este propósito. Segundo utilizando la app desarrollada con anterioridad.</p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">La muestra es de tres personas. Tienen un intento y tres minutos para reportar la desaparición de su perro y tres intentos y cinco minutos para reconocer. En el primer caso, tienen que encontrar diferentes perros con diferentes fotos y en el segundo varían las condiciones del entorno. Consultar tabla:</p>
+<table style="border:1px solid black;border-collapse:collapse;" cellspacing="0" cellpadding="5px">
+    <tbody>
+        <tr>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;"><b>Study cases</b></p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;"><b>Used tool</b></p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;"><b>Scenario for identification photos</b></p></td>
+        </tr>
+        <tr>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">1</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">Web platforms</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="font-family: sans-serif; font-size: 14px; line-height: 1.6; text-align: justify;">Different dogs in each attempt</p></td>
+        </tr>
+        <tr>
+            <td style="border:1px solid black;" rowspan="3" valign="middle"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">2</p></td>
+            <td style="border:1px solid black;" rowspan="3" valign="middle"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">Mobile app </p></td>
+            <td style="border:1px solid black;" valign="top"><p style="font-family: sans-serif; font-size: 14px; line-height: 1.6; text-align: justify;">Attempt 1: Dark environment</p></td>
+        </tr>
+        <tr>
+            <td style="border:1px solid black;" valign="top"><p style="font-family: sans-serif; font-size: 14px; line-height: 1.6; text-align: justify;">Attempt 2: Illuminated environment</p></td>
+        </tr>
+        <tr>
+            <td style="border:1px solid black;" valign="top"><p style="font-family: sans-serif; font-size: 14px; line-height: 1.6; text-align: justify;">Attempt 3: With another dog of a different breed</p></td>
+        </tr>
+    </tbody>
+</table><br>
+
+<h4 style="font-weight:bold; font-size:14px; font-family:sans-serif;" id="res">Resultados</h4>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">En cada uno de los casos de estudio se tuvieron en cuenta los siguientes indicadores: errores del usuario (cuando se desvía de la tarea propuesta) intentos fallidos, identificación o no del perro por parte del dueño y el tiempo total. Este último es la suma de los tiempos en la actividad uno y dos.</p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">En el caso 1, como se puede ver el usuario uno es el único que ha conseguido identificar al perro y tener el menor número de errores. A diferencia del usuario tres. Consultar tabla:</p>
+<table style="border:1px solid black;border-collapse:collapse;" cellspacing="0" cellpadding="5px" style="text-align: center;">
+    <tbody>
+        <tr>
+            <td style="border:1px solid black;" valign="middle"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;"><b>Owners</b> </p></td>
+            <td style="border:1px solid black;" valign="middle"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;"><b>User errors</b></p></td>
+            <td style="border:1px solid black;" valign="middle"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;"><b>Failed attempts</b></p></td>
+            <td style="border:1px solid black;" valign="middle"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;"><b>Identifiedthe dog at least 1 time</b></p></td>
+            <td style="border:1px solid black;" valign="middle"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;"><b>Time spent (seconds)</b></p></td>
+            <td style="border:1px solid black;" valign="middle"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;"><b>Used platform</b></p></td>
+        </tr>
+        <tr>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">1</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">2</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">2</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">Yes</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">1050</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">Web Portal 1 </p></td>
+        </tr>
+        <tr>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">2</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">3</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">3</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">No</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">1200</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">Facebook</p></td>
+        </tr>
+        <tr>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">3</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">4</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">3</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">No</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">1200</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">Web Portal 2 </p></td>
+        </tr>
+    </tbody>
+</table><br>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">En el caso 2, se muestra como reacciona la herramienta propuesta cuando la búsqueda es infructuosa o correcta.</p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">No se encuentra porque no se puede apreciar los elementos característicos del perro. Además, la imagen estaba oscura.</p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">En esta segunda vez se puede observar como al capturar la imagen del perro con otro perro de diferente raza y tamaño en la misma imagen, el modelo se centra en uno e intenta hacerlo coincidir con lo que hay en la base de datos, encontrando una coincidencia.</p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Los resultados de los dueños fueron diferentes:</p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">el dueño uno obtuvo un solo fallo en su primer intento, en condiciones ambientales oscuras. El dueño dos obtuvo un solo acierto en un entorno con condiciones idóneas de luminosidad.</p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">El dueño tres acertó en los tres intentos, probablemente por la alta resolución de la cámara de su móvil.</p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Tabla comparativa de resultados:</p>
+<table style="border:1px solid black;border-collapse:collapse;" cellspacing="0" cellpadding="5px" style="text-align: center;">
+    <tbody>
+        <tr>
+            <td style="border:1px solid black;" valign="middle"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;"><b>Owners</b> </p></td>
+            <td style="border:1px solid black;" valign="middle"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;"><b>User errors</b></p></td>
+            <td style="border:1px solid black;" valign="middle"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;"><b>Failed attempts</b></p></td>
+            <td style="border:1px solid black;" valign="middle"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;"><b>Identifiedthe dog at least 1 time</b></p></td>
+            <td style="border:1px solid black;" valign="middle"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;"><b>Time spent (seconds)</b></p></td>
+            <td style="border:1px solid black;" valign="middle"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;"><b>Camera resolution</b></p></td>
+        </tr>
+        <tr>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">1</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">1</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">1</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">Yes</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">165</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">Regular</p></td>
+        </tr>
+        <tr>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">2</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">3</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">2</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">Yes</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">313</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">Low</p></td>
+        </tr>
+        <tr>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">3</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">0</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">0</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">Yes</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">207</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">High</p></td>
+        </tr>
+    </tbody>
+</table><br>
+
+<h4 style="font-weight:bold; font-size:14px; font-family:sans-serif;" id="operacionesSecuenciales">Conclusiones</h4>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">A continuación se muestra una tabla con los resultados finales de la experimentación, en ambos casos de uso, la aplicación descrita en este artículo y las plataformas convencionales:</p>
+<table style="border:1px solid black;border-collapse:collapse;" cellspacing="0" cellpadding="5px">
+    <tbody>
+        <tr>
+            <td style="border:1px solid black;" valign="middle"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;"> <b>Case/Details</b></p></td>
+            <td style="border:1px solid black;" valign="middle"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;"><b>Average user errors</b></p></td>
+            <td style="border:1px solid black;" valign="middle"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;"><b>Average failed attempts</b></p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;"><b>Total owners who identified the dog at least 1 time</b></p></td>
+            <td style="border:1px solid black;" valign="middle"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;"><b>Average time spent (seconds)</b></p></td>
+        </tr>
+        <tr>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">1</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">3</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">3</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">1</p></td>
+            <td style="border:1px solid black;" valign="top"><p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">1150</p></td>
+        </tr>
+        <tr>
+            <td style="border:1px solid black;" valign="top"> <p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">2</p></td>
+            <td style="border:1px solid black;" valign="top"> <p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">1</p></td>
+            <td style="border:1px solid black;" valign="top"> <p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">1</p></td>
+            <td style="border:1px solid black;" valign="top"> <p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">3</p></td>
+            <td style="border:1px solid black;" valign="top"> <p style="text-align: center; font-family: sans-serif; font-size: 14px; line-height: 1.6;">618</p></td>
+        </tr>
+    </tbody>
+</table><br>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Retomando las preguntas que se hacían al principio del caso:</p>
+<ul>
+    <li><p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;"><strong>RQ1: ¿Es posible crear una aplicación móvil para identificar y reportar perros callejeros de forma eficiente aplicando reconocimiento de imágenes?</strong></p>
+    <p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">En el caso de estudio 1 se obtuvieron casi tres veces más intentos erróneos, en comparación con el caso 2. Esto se debe a que las plataformas realizan una muestra masiva de todos los reportes, lo que hace que la identificación sea bastante dificultosa. Solo 1 de los dueños pudo identificar a un perro durante el primer caso, mientras que en el segundo, todos pudieron identificar a un perro al menos una vez.</p>
+    <p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">En consecuencia, la pregunta de investigación RQ1 puede responderse: “Sí, es posible construir una aplicación móvil aplicando reconocimiento de imágenes para identificar o reportar perros callejeros de manera eficiente, dado que el uso del modelo de aprendizaje automático para etiquetar las razas de perros, fue muy útil en el momento de la identificación, ya que reduce significativamente el número de perros perdidos mostrados. Los resultados mostraron que el tiempo promedio y los intentos fallidos con la aplicación propuesta en el artículo es mucho más eficiente en comparación con las plataformas web tradicionales que se utilizan habitualmente”.</p></li>
+    <li><p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;"><strong>RQ2: ¿Es posible que una aplicación móvil con reconocimiento de imágenes para identificar perros callejeros sea más accesible?</strong></p>
+    <p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Como se ha podido observar en la última tabla, el número medio de errores es mayor en el caso uno (plataformas tradicionales) que en el caso dos (app objeto de estudio en este artículo). Esto es así porque las plataformas tradicionales contienen información mezclada que aburren al usuario durante la búsqueda. Esto demuestra que la usabilidad de la aplicación propuesta es mayor que la de las plataformas tradicionales. Además, se puede observar que el tiempo medio de uso en el caso 2 es menos de la mitad del tiempo requerido en el caso 1.</p>
+    <p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Por todo lo anterior se puede concluir respondiendo a la pregunta dos como sigue.</p>
+    <p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Sí, es más accesible tener una aplicación móvil basada en reconocimiento de imágenes para la identificación de perros callejeros. Además, el grado de usabilidad es mayor comparado con la usabilidad en plataformas web tradicionales.</p>
+    <p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Por último se remarca que en el reconocimiento de imágenes la iluminación o la resolución de la cámara utilizada son factores de gran importancia. Esto se puede observar, puesto que el propietario tres con una cámara de alta resolución acierta en todos sus intentos, mientras que el propietario uno no. Esto se debe a que la iluminación actúa como un factor importante, al estar en ambientes oscuros.</p></li>
+</ul>
 
 <h3 style="font-weight:bold; font-size:16.8px; font-family:sans-serif;" id="caso2">Predicción de accidentes de tráfico</h3>
 <p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Los accidentes de tráfico son actualmente una de las mayores causas de muertes y lesiones, no solo en España, sino mundialmente. Alrededor de 1.35 millones de personas pierden la vida a causa de estos accidentes de tráfico. Se han propuesto numerosas soluciones a este grave problema, principalmente el diseño y desarrollo de sistemas que predicen los accidentes de tráfico, así como la gravedad de cada uno de los accidentes.</p>
@@ -259,6 +442,7 @@
 <p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Cuando se escojan los datos que se introducirán en esta técnica, se debe tener en cuenta, que debe ser lo suficientemente grande y variado. De esta manera se podrán extraer con el AutoFE nuevas características que no se habían considerado con antelación o relaciones que no son tan evidentes, esto se lograra principalmente con transformación y agregación. Un buen comienzo es fundamental para poder empezar a trabajar.</p>
 <p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Tras tener los datos se puede empezar a construir modelos, para esta tarea tan tediosa AutoML se encargará de encontrar la mejor arquitectura posible para nuestro problema, siguiendo las métricas de se le indiquen, de esta manera irán probando diferentes distribuciones y realizando modificaciones siguiendo un algoritmo de búsqueda. Cuando se tiene una arquitectura que probar se ajustaran los hiperparámetros para que pueda dar lo mejor de sí misma, AutoML también nos ayuda en esta tarea utilizando métodos de optimización será capaz de ajustarlos progresivamente hasta llegar a un punto en el que no pueda mejorar más.</p>
 <p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">También, se han visto cuáles son algunas de las diferentes áreas en las que se emplea actualmente inteligencia artificial y en las que se ha podido usar AutoML de manera satisfactoria, demostrando que estas técnicas son muy polivalentes y tienen mucho que ofrecer. En los casos de uso se han podido estudiar con más profundidad dos casos específicos en los que se ha optado por esta técnica, pero hay muchos más casos interesantes de aplicación que todavía nos quedan por descubrir y esperamos que siga progresando esta técnica.</p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">En definitiva, este estudio ha servido para conocer en mayor profundidad el desarrollo de un tipo de tecnología que en los años venideros podría ser una de las piedras angulares del aprendizaje automático. Además del estudio de todas las aplicaciones que tiene, los campos asociados han permitido conocer como podría influir AutoML en la vida cotidiana del usuario.</p>
 
 <h2 style="border-bottom:1px solid #a2a9b1; margin-top:1em; font-size:21px; font-family:'Linux Libertine', Georgia, Times, serif;" id="bibliografia">Bibliografía</h2>
 <div style="list-style-type:decimal; font-family:sans-serif; font-size:14px; line-height:1.6;">
