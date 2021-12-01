@@ -438,6 +438,7 @@
 <p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Por ello, en este contexto se decidió utilizar AutoML que permitía reducir los esfuerzos humanos, tiempos de desarrollo, etc.</p>
 <p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Es en ese punto donde ha surgido el aprendizaje automático automatizado. El objetivo del uso del AutoML en este contexto fue conseguir reducir a la mitad el número total de muertes y lesiones producidas por estos accidentes. Para ello, se quería predecir los choques y clasificar su gravedad para proporcionar información de vital importancia para mejorar la gestión del flujo de tráfico y aumentar la seguridad vial <a href="#ref:casoCrash">[30]</a>.</p>
 <p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Esta predicción está enfocada en generar modelos predictivos utilizando el histórico de datos basándose en datos nuevos y no vistos hasta el momento. En el ámbito del transporte y la conducción, es muy difícil extraer datos fiables y útiles para el desarrollo de modelos exitosos en la tarea de predicción. Por ello, en este contexto se utilizó el AutoML con el objetivo de encontrar, de manera automatizada la combinación de técnicas de procesamiento, algoritmos e hiperparámetros que maximizasen los resultados de las predicciones de los modelos.</p>
+<p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">En este contexto, se utilizaron 3 métodos del AutoML, concretamente se utilizaron Auto-Sklearrn, TPOT y Gluon, cuyas estrategias de machine learning están basadas en optimización, meta-learning y ensemble learning, por un lado, programación genética por otro lado y por último stacking. Se compararon los modelos obtenidos con estos métodos frente a los enfoques tradicionales utilizados en los accidentes de tráfico. Estos eran Gradiente Boosting, Gaussian Naive Bayes, KNN, MultiLayerPerceptron y Random Forest. Esto se hacía con el objetivo de probar el rendimiento de estas estrategias.</p>
 <p align="justify" style="font-family:sans-serif; font-size:14px; line-height:1.6;">Los resultados obtenidos con los modelos de AutoML fueron muy prometedores, puesto que se obtuvo en cada uno de los modelos, cómo mínimo un 80 % de precisión en 5 conjuntos de datos distintos, que fueron utilizados para probar estos modelos.</p>
 <p style="text-align:center;"><img src="https://aulaglobal.uc3m.es/draftfile.php/2631638/user/draft/334025408/image.png" alt=""></p>
 <p align="center" style="font-family:sans-serif; font-size:12px; line-height:1.4em;">Figura 8.1 Resultados obtenidos para los 5 conjuntos de datos</p>
@@ -506,8 +507,6 @@
 <h2 style="border-bottom:1px solid #a2a9b1; margin-top:1em; font-size:21px; font-family:'Linux Libertine', Georgia, Times, serif;" id="preguntas">Preguntas clave</h2>
 <div style="list-style-type:decimal; font-family:sans-serif; font-size:14px; line-height:1.6;">
 <ol>
-    <li>¿Qué significa la abreviación AutoML?<br>
-    Automated Machine Learning. En español, aprendizaje automático automatizado.</li>
     <li>¿Qué es AutoML a grandes rasgos?<br>
     Es un conjunto de herramientas unificadas para la construcción automática de modelos de aprendizaje automático con un bajo coste computacional</li>
     <li>¿Sobre qué clase de problemas se puede utilizar AutoML?<br>
@@ -522,12 +521,16 @@
     AutoML nos ayuda en la <b>limpieza de los datos</b>, la <b>extracción de características</b>, la <b>selección de la arquitectura</b> de nuestro modelo de red neuronal y en la <b>selección de los hiperparámetros</b>, las tareas más tediosas de generar modelos en IA.</li>
     <li>¿En qué consiste el Hyperparameter Optimization (HPO)?<br>
     Se centra en la búsqueda de configuraciones de hiperparámetros que favorezcan a un buen rendimiento de un modelo de aprendizaje automático dado.</li>
-    <li>¿AutoML ha demostrado ser una técnica que ofrece resultados buenos?</li>
+    <li>¿AutoML ha demostrado ser una técnica que ofrece resultados buenos?<br>
+    Si, siempre y cuando los datos sean lo suficientemente amplios y variados.</li>
     <li>¿Por qué es posible usar AutoML en dispositivos móviles?<br>
     Porque AutoML tiene un coste computacional muy bajo, por lo que es una solución perfecta para aplicar el aprendizaje automático en pequeños dispositivos.</li>
-    <li>¿Por qué resulta útil AutoML en Data Mining?</li>
-    <li>¿Qué se deseaba mejorar en el caso de uso de la predicción de accidentes de tráfico?</li>
-    <li>¿Con cuántos conjuntos de datos se trabajó en el caso de la predicción de accidentes? ¿Por qué es relevante utilizar varios conjuntos de datos?</li>
+    <li>¿Por qué resulta útil AutoML en Data Mining?<br>
+    Tanto la <b>elección de un modelo predictivo preciso</b> como del <b>ajuste de los parámetros</b> son hechos por AutoML, lo que facilita mucho las cosas y hace más fácil la utilización y el entendimiento de este tipo de procesos.</li>
+    <li>¿Qué se deseaba mejorar en el caso de uso de la predicción de accidentes de tráfico?<br>
+    Se quería reducir a la mitad el número total de muertes y lesiones producidas por estos accidentes. Para ello, se pretendía predecir los choques y clasificar su gravedad para proporcionar información de vital importancia para <b>mejorar la gestión del flujo de tráfico y aumentar la seguridad vial</b>.</li>
+    <li>¿Con cuántos conjuntos de datos se trabajó en el caso de la predicción de accidentes? ¿Por qué es relevante utilizar varios conjuntos de datos?<br>
+    Se trabajó con 5 conjuntos de datos distintos, correspondientes a los años transcurridos entre 2014 y 2018. La utilización de distintos conjuntos de datos es útil cuando queremos segmentar un set de datos de una gran dimensionalidad.</li>
     <li>¿Qué tres grandes componentes determinan un sistema NAS (Neural Architecture Search)?<br>
     Un método de NAS queda determinado por un <b>espacio de búsqueda</b>, un <b>algoritmo de búsqueda</b> concreto y una <b>estrategia de evaluación</b>.</li>
     <li>¿Qué 3 métodos más comunes se utilizan en la actualidad para la selección de hiperparámetros óptimos?<br>
